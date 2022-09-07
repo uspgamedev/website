@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -15,16 +16,18 @@
       <nav>
         <a href="index.html"><img src="assets/logo-light.png"></a>
         <a class="header-name" href="index.html">uspgame<span>.dev</span></a>
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
-            <li><a href="#about">sobre</a></li>
-            <li><a href="#projects">projetos</a></li>
-            <li><a href="#discord">discord</a></li>
-            <li><a href="https://gitlab.com/uspgamedev" target="_blank">gitlab</a></li>
-            <li><a href="https://github.com/uspgamedev" target="_blank">github</a></li>
-            <li><a href="">wiki</a></li>
+            <li><a href="#about" onclick="hideMenu()">sobre</a></li>
+            <li><a href="#projects" onclick="hideMenu()">projetos</a></li>
+            <li><a href="#discord" onclick="hideMenu()">discord</a></li>
+            <li><a href="https://gitlab.com/uspgamedev" target="_blank" onclick="hideMenu()">gitlab</a></li>
+            <li><a href="https://github.com/uspgamedev" target="_blank" onclick="hideMenu()">github</a></li>
+            <li><a href="" onclick="hideMenu()">wiki</a></li>
           </ul>
         </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
       </nav>
 
       <div class="text-box">
@@ -69,9 +72,26 @@
 
     <section class="copyright">
       <div>
+        <div>
           <p><b>Layout & Code</b>: Copyright © 2022 <b>USPGAMEDEV</b> via <b>GPL-3.0</b> </p>
           <p>contato@uspgamedev.org</p>
+        </div>
       </div>
     </section>
+
+    <script>
+
+      var navLinks = document.getElementById("navLinks")
+      
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-250px";
+      }
+
+    </script>
+
   </body>
 </html>

@@ -40,7 +40,7 @@ h1 {
 
 nav {
     display: flex;
-    padding: 0% 6%;
+    padding: 6% 6%;
     justify-content: space-between;
     align-items: center;
 }
@@ -50,14 +50,14 @@ nav img {
     height: 64px;
 }
 
-.header-name {
+nav a {
     padding-left: 20px;
     color: var(--white);
     text-decoration: none;
     font-size: 30px;
 }
 
-.header-name span {
+nav a span {
     color: var(--red-dark);
 }
 
@@ -111,8 +111,8 @@ nav img {
 
 .text-box img {
     margin-bottom: 50px;
-    width: 500px;
-    height: 500px;
+    width: 50vmin;
+    height: 50vmin;
 }
 
 .text-box span {
@@ -128,7 +128,7 @@ section {
 }
 
 section div {
-    padding: 40px 0 50px 0;
+    padding: 1em 0 1em 0;
     color: var(--white);
     text-align: center;
 }
@@ -138,14 +138,14 @@ section div h1 span {
 }
 
 section div div {
-    width: 50rem;
+    width: min(50rem, 60vw);
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
 }
 
 section div div p {
-    padding: 10px 0 0 0;
+    padding: 1em 0 0 0;
 }
 
 section div div p a {
@@ -166,5 +166,90 @@ section div div p a {
     background-image: url(assets/discord-logo.svg);
     background-repeat: no-repeat;
     background-position: 50%;
-    background-size: 30rem;
+    background-size: min(30rem, min(90vw, 90vh));
+}
+
+.copyright div div {
+    width: min(50rem, 60vw);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+nav .fa {
+    display: none;
+}
+
+@media(max-width: 700px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    nav {
+        justify-content: left;
+    }
+
+    nav a {
+        padding-left: 20px;
+        color: var(--white);
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    nav img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav-links ul li a {
+        color: var(--white);
+        text-decoration: none;
+        font-size: 15px;
+        transition: 0.3s;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: #45252a;
+        height: 100vh;
+        width: 30vw;
+        top: 0;
+        right: -250px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+
+    nav .fa {
+        display: block;
+        color: var(--white);
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    nav .fa-bars {
+        position: absolute;
+        right: 6%;
+    }
+
+    nav .fa:hover {
+        color: var(--red-dark);
+    }
+
+    .nav-links ul {
+        padding: 2vw 0 0 3vw;
+    }
+
+    .nav-links ul li:hover::after {
+        width: 0%;
+    }
 }
