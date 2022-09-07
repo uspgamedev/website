@@ -9,8 +9,10 @@
     --red-black: #45252a;
 }
 
-html {
+html, body {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 *{
@@ -217,7 +219,7 @@ nav .fa {
     }
 
     .nav-links {
-        position: absolute;
+        position: fixed;
         background: #45252a;
         height: 100vh;
         width: 30vw;
