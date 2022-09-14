@@ -147,7 +147,7 @@ section div div {
     width: min(50rem, 60vw);
     margin-left: auto;
     margin-right: auto;
-    text-align: justify;
+    text-align: left;
 }
 
 section div div p {
