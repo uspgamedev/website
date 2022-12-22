@@ -1,0 +1,49 @@
+@font-face {
+  font-family: FuturaBook;
+  src: url(/assets/fonts/Futura_Book.otf);
+}
+
+body {
+    margin: 0;
+    /*background-color: #f1f1fa;*/
+    background-color: #59315f;
+}
+
+section {
+    width: 100%;
+}
+
+#landing img {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#landing .left {
+    height: 100vh;
+    padding-top: 15vh !important;
+}
+
+#landing .right {
+    background-color: #535486;
+    bottom: 0;
+    height: 100vh;
+    padding-top: 30vh !important;
+}
+
+h1, h2, p {
+    font-family: FuturaBook;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 96px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 18px;
+}
