@@ -10,40 +10,86 @@ body {
 }
 
 section {
-    width: 100%;
+    min-width: 100vw;
+    padding: 5vh 25vw !important;
+}
+
+@media (max-width:992px) {
+    section {
+        padding: 5vh 10vw !important;
+    }
 }
 
 #landing img {
-    width: 50%;
+    width: 30vh;
     margin-left: auto;
     margin-right: auto;
 }
 
-#landing .left {
-    height: 100vh;
-    padding-top: 15vh !important;
-}
-
-#landing .right {
+.light-bg {
     background-color: #535486;
-    bottom: 0;
-    height: 100vh;
-    padding-top: 30vh !important;
 }
 
-h1, h2, p {
+h1, h2, h3, h4, p, li, ul {
     font-family: FuturaBook;
     color: #ffffff;
 }
 
 h1 {
-    font-size: 96px;
+    font-size: 8vh;
+    font-weight: bold;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 2.75vh;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 2.5vh;
+    font-weight: bold;
 }
 
 p {
-    font-size: 18px;
+    font-size: 2vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
+
+a.button-theme {
+    font-size: 2vh !important;
+    width: 40vh;
+    background-color: #f6eb61;
+    font-weight: bold;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+}
+
+@media (max-width:600px) {
+    a.button-theme {
+        width: 100%;
+    }
+}
+
+.item {
+    font-size: 2.15vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+ul {
+    display:list-item;
+    font-size: 2.15vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    list-style-position: inside;
+    /* color:  #f6eb61 */
+}
+
