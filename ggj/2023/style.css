@@ -74,7 +74,7 @@ a.button-theme {
 
 @media (max-width:600px) {
     a.button-theme {
-        width: 60vw;
+        width: 100%;
     }
 }
 
