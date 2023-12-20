@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./assets/logo-dark.png?">
     <title>USPGameDev</title>
     
@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
@@ -35,7 +36,7 @@
 
       <div class="text-box">
         <div></div>
-        <img src="assets/logo-light.png">
+        <img  id="logo" src="assets/logo-light.png">
         <h1>uspgame<span>dev</span></h1>
         <p>Grupo de estudo e desenvolvimento de jogos<br>da Universidade de São Paulo.</p>
         <div></div>
@@ -57,8 +58,53 @@
       <div>
         <h1>Nossos projetos</h1>
         <div>
-          <p>Todos os projetos desenvolvidos no grupo são disponibilizados gratuitamente em nossa página no itch.io! Sinta-se livre para jogar cada um e nos dizer qual mais gostou!</p>
-          <p><a href="https://uspgamedev.itch.io/" target="_blank">Veja nossa página na itch.io.</a></p>
+          <p>Todos os projetos desenvolvidos no grupo são disponibilizados gratuitamente em nossa <a href="https://uspgamedev.itch.io/" target="_blank">página no itch.io!</a> Sinta-se livre para jogar cada um e nos dizer qual mais gostou!</p>
+
+          <article id="newest" class="newest">
+            <h2>Novidades</h2>
+            <p class="collection_description">Os projetos mais recentes feitos pelo grupo, todos publicados no último semestre.</p>
+            
+            <div class="carousel_wrapper">
+              <div id="newest-list" class="game_list"></div>
+            </div>
+          </article>
+
+          <article id="highlights" class="highlights">
+            <h2>Destaques</h2>
+            <p class="collection_description">Nossos jogos mais bem acabados, que marcaram a história do UGD de alguma forma.</p>
+            
+            <div class="carousel_wrapper">
+              <div id="highlights-list" class="game_list"></div>
+            </div>
+          </article>
+
+          <article id="projects" class="projects">
+            <h2>Projetos</h2>
+            <p class="collection_description">Projetos desenvolvidos pelo grupo ao longo dos anos.</p>
+            
+            <div class="carousel_wrapper">
+              <div id="projects-list" class="game_list"></div>
+            </div>
+          </article>
+
+          <article id="training" class="training">
+            <h2>Treinamento</h2>
+            <p class="collection_description">Projetos de treinamento feitos para ensinar o básico de Godot e programação para os novos membros do grupo. Nos treinamentos, que acontecem no início de todo semestre, os participantes tem a missão de reproduir um jogo ou gênero clássico.</p>
+            
+            <div class="carousel_wrapper">
+              <div id="training-list" class="game_list"></div>
+            </div>
+          </article>
+
+          <article id="jams" class="jams">
+            <h2>Game Jams</h2>
+            <p class="collection_description">O grupo participa regularmente de game jams e as vezes organiza suas próprias.</p>
+            
+            <div class="carousel_wrapper">
+              <div id="jams-list" class="game_list"></div>
+            </div>
+          </article>
+
           <p>Mas nem todos os projetos do grupo são jogos digitais! Temos, por exemplo, o Grupo de Estudos, que faz reuniões periodicamente para discutir aspectos teóricos e/ou sociais do mundo de desenvolvimento de jogos.</p>
           <p>Temos também o Marmotex, um sistema de RPG de mesa que busca ser simples e adaptável a qualquer tipo de cenário, facilitando o trabalho do mestre e dos jogadores.</p>
         </div>
@@ -97,5 +143,7 @@
 
     </script>
 
+
+    <script src="/loadGameList.js"></script>
   </body>
 </html>
