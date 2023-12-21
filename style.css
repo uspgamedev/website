@@ -157,6 +157,7 @@ section div div p {
 
 section div div p a {
     color: var(--red-dark);
+    font-weight: 400;
 }
 
 .about {
@@ -340,7 +341,7 @@ article {
     margin: 0;
 }
 
-.game_title {
+.game_cell a {
     font-family: 'Lato';
     font-weight: 500;
     font-size: 18px;

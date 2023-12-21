@@ -10,8 +10,10 @@ async function createGameLists() {
         var img = gameList[game][1];
         var link = gameList[game][2];
 
-        document.getElementById(gameList[game][4] + '-list').innerHTML += '<div class="game_cell"><a href="'
-            + link + '"><img src="' + img + '"></a><a class="game_title" href="' + link + '">' + title + '</a></div>';
+        var article = gameList[game][4];
+
+        document.getElementById(article + '-list').innerHTML += '<div class="game_cell"><a href="'
+            + link + '"><img src="' + img + '"></a><a href="' + link + '">' + title + '</a></div>';
     }
 }
   
