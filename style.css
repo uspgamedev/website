@@ -22,7 +22,7 @@ html, body {
 
 p {
     font-family: 'Lato';
-    font-weight: 400;
+    font-weight: 300;
     font-size: 25px;
 }
 
@@ -131,6 +131,7 @@ nav a span {
 
 section {
     width: 100%;
+    padding: 40px 0 50px 0;
 }
 
 section div {
@@ -155,7 +156,8 @@ section div div p {
 }
 
 section div div p a {
-    color: var(--blue-dark);
+    color: var(--red-dark);
+    font-weight: 400;
 }
 
 .about {
@@ -258,4 +260,92 @@ nav .fa {
     .nav-links ul li:hover::after {
         width: 0%;
     }
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      top: 0;
+    }
+    50% {
+      top: 12px;
+    }
+  }
+
+#logo {
+    animation: MoveUpDown 1s linear infinite;
+    animation-timing-function: ease-in-out;
+    position: relative;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--white-black);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--red-dark);
+  }
+
+.carousel_wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-top: 20px;
+}
+
+h2 {
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--red-dark);
+}
+
+article {
+    margin: 55px 0 55px 0;
+}
+
+.collection_description {
+    font-size: 22px;
+}
+
+.game_list {
+    display: flex;
+    grid-gap: 15px;
+    align-items: start;
+    padding: 0;
+    height: 220px;
+}
+
+.game_cell {
+    min-width: 200px;
+    min-height: 200px;
+    margin: 0;
+    padding: 0;
+}
+
+.game_cell:hover {
+    border: solid;
+    border-width: 5px 0 0 0;
+    border-color: var(--red-dark);
+}
+
+.game_cell img {
+    max-width: 100%;
+    padding: 0 0 10px 0;
+    margin: 0;
+}
+
+.game_cell a {
+    font-family: 'Lato';
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--white);
+    text-decoration: none;
+    overflow-wrap: break-word;
 }
